@@ -12,6 +12,7 @@ def gen_config(args):
         result_home = '../result'
         
         seq_name = args.seq
+        %总结：所以要么不加 './' 或者"/"，要么中间的路径不能出现'/'开头，合并路径感觉是检查了根目录'/'的位置.还是让自动加上'/'就行
         img_dir = os.path.join(seq_home, seq_name, 'img')
         gt_path = os.path.join(seq_home, seq_name, 'groundtruth_rect.txt')
 
@@ -46,3 +47,4 @@ def gen_config(args):
         savefig_dir = ''
 
     return img_list, init_bbox, gt, savefig_dir, args.display, result_path
+    %args.display是什么意思？
